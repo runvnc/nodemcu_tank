@@ -1,7 +1,7 @@
 
 # NodeMCU Tank control with gamepad over HTTP on Wifi access point
 
-![Alt text](relative/path/to/tank.jpg?raw=true "Tank")
+![Tank](tank.jpg?raw=true "Tank")
 
 ## Software outline
 
