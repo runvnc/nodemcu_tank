@@ -1,0 +1,33 @@
+<html><body> <script>
+  var last = "";
+  var gamepad = false;
+  getGamepad=()=> { 
+    for (let pad of navigator.getGamepads()) {
+      if (pad && pad.axes.length > 2) return pad;
+    }
+    return false;
+  }
+  getStickB=(pad)=>{
+    return [ (pad.axes[2]*1000).toFixed(0), (pad.axes[3]*1000).toFixed(0) ];
+  }
+  async function fetchAsync (url) {
+    let response = await fetch(url);
+    let data = await response.json();
+    return data;
+  }  
+  httpUpdate=(x,y)=> {
+    let base = 'http://192.168.1.2/cmd';
+    let url = base+'?x='+x+'&y='+y+'&c='+Date.now();
+    fetchAsync(url).catch(console.error);
+  } 
+  update=() => {
+    gamepad = getGamepad();
+    if (!gamepad) return;
+    let axes = getStickB(gamepad);
+    let serialized = axes.join('_');
+    let isZero = axes[0] == 0 && axes[1] == 0;
+    if (serialized == last) return;
+    last = serialized;
+    httpUpdate(axes[0],axes[1]);
+  } 
+  setInterval(update, 60); </script> </body> </html>
