@@ -1,0 +1,15 @@
+
+# NodeMCU Tank control with gamepad over HTTP on Wifi access point
+
+![Alt text](relative/path/to/tank.jpg?raw=true "Tank")
+
+## Software outline
+
+`web2.lua` uses `httpserver.lua` to create a web server that 1) serves the web page with the JavaScript for control
+and 2) handles a single command with joystick position updates.
+
+`control.lua` converts the joystick coordinates to motor speeds and `motors.lua` uses the `pwm` modules to set the
+speed and direction of the motors.
+
+`wifi.lua` sets up a local wifi access point with ip address `192.168..1.2`
+
