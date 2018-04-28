@@ -17,7 +17,7 @@ The NodeMCU and motor drive shield are also available on Amazon such as [NodeMCU
 
 ![Motor shield](shield.jpg?raw=true "Shield")
 
-The chassis and motor shield kits should contain enough documentation for assembling the kit and connecting to the wires.  I was lucky because I have an older brother who is a mechanical/electrical engineer who did the "hard" parts.  This approach was quite effective so I highly recommend it.  If you don't have one of those, hopefully the photos I uploaded will help.  My goal for this github was mainly to share the lua code I used.
+The tank chassis and motor shield kits should contain enough documentation for assembling the kit and connecting to the wires.  I was lucky because I have an older brother who is a mechanical/electrical engineer who did the "hard" parts.  This approach was quite effective so I highly recommend it LOL.  If you don't have one of those, hopefully the photos I uploaded will help.  My goal for this github was mainly to share the lua code I used.
 
 Note that the photos show some "extra" resistors and wires connected on the IO pins on the motor shield and to a few motor leads.  I believe we connected to pins 6 and 7. This is for reading the hall effect sensors that are attached to the motors in order to create a control loop for speed.  I was not able to get the speed control loop to work properly so that code is not checked in.  Just setting the duty on the motors works fine for control for now.  
 
