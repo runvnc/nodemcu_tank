@@ -39,3 +39,10 @@ speed and direction of the motors.
 
 `init.lua` runs at boot and loads the other files including the web server.
 
+## Flashing and uploading files
+
+I used the standard new ['pyflasher'](https://github.com/marcelstoer/nodemcu-pyflasher) to upload the firmware (nodemcu.bin).  You may want to customize the firmware and do a [cloud build](https://nodemcu-build.com/).  When you reflash it make sure to backup any files on the device and then select the option to erase the old data otherwise it may not boot up correctly.
+
+To edit the code and upload files I used [ESPlorer](https://esp8266.ru/esplorer/) successfully.  Note that it seemed I need to keep clicking on the DTR toggle quite frequently for resetting.
+
+
