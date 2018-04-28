@@ -1,7 +1,25 @@
 
 # NodeMCU Tank control with gamepad over HTTP on Wifi access point
 
-![Tank](tank.jpg?raw=true "Tank")
+![Tank](tankmain.jpg?raw=true "Tank")
+
+## Hardware
+
+### Chasis
+
+There are several similar tank chassis kits on Amazon such as [Kit](https://www.amazon.com/Tracked-Platform-Aluminum-Chassis-Arduino/dp/B0746FTL9Z/ref=sr_1_fkmr2_3?ie=UTF8&qid=1524948074&sr=8-3-fkmr2&keywords=nodemcu+tank+chassis).
+
+## Brains
+
+The NodeMCU and motor drive shield are also available on Amazon such as [NodeMCU and motor shield](https://www.amazon.com/KOOKYE-ESP8266-ESP-12E-NodeMcu-Expansion/dp/B01C6MR62E/ref=sr_1_9?s=hi&ie=UTF8&qid=1524948220&sr=1-9&keywords=nodemcu)
+
+## Hardware assembly
+
+![Motor shield](shield.jpg?raw=true "Shield")
+
+The chassis and motor shield kits should contain enough documentation for assembling the kit and connecting to the wires.  I was lucky because I have an older brother who is a mechanical/electrical engineer who did the "hard" parts.  This approach was quite effective so I highly recommend it.  If you don't have one of those, hopefully the photos I uploaded will help.
+
+Note that the photos show some "extra" resistors and wires connected on the IO pins on the motor shield and to a few motor leads.  I believe we connected to pins 6 and 7. This is for reading the hall effect sensors that are attached to the motors in order to create a control loop for speed.  I was not able to get the speed control loop to work properly so that code is not checked in.  Just setting the duty on the motors works for control fine for now.  
 
 ## Software outline
 
