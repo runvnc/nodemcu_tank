@@ -23,7 +23,7 @@ Note that the photos show some "extra" resistors and wires connected on the IO p
 
 ## Operation
 
-When you turn on the power switch on the motor shield the NodeMCU boots up and creates a wifi access point named 'vehicle'.  The password is set in wifi.lua.  Once you connect to that wifi network you can go to Google Chrome and hit `http://192.168.1.2/`.  You will need a USD Gamepad like an XBox 360 controller clone.  Then use the right analog stick to control the tank (if everything is working).  If it doesn't work the first thing to check is the source code which should be some JavaScript for sending each joystick position update in a simple HTTP GET request.
+When you turn on the power switch on the motor shield the NodeMCU boots up and creates a wifi access point named 'vehicle'.  The password is set in wifi.lua.  Once you connect to that wifi network you can go to Google Chrome and hit `http://192.168.1.2/`.  You will need a USB Gamepad like an XBox 360 controller clone.  Then use the right analog stick to control the tank (if everything is working).  If it doesn't work the first thing to check is the source code which should be some JavaScript for sending each joystick position update in a simple HTTP GET request.
 
 ## Software outline
 
